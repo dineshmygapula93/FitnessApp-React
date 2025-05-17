@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_REACT_APP_KEY_FIRE,
+  apiKey: import.meta.env.VITE_REACT_APP_KEY_FIREBASE,
   authDomain: "fitnessapp-d8ab4.firebaseapp.com",
   projectId: "fitnessapp-d8ab4",
   storageBucket: "fitnessapp-d8ab4.firebasestorage.app",
