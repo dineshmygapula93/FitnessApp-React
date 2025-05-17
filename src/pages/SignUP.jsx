@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
+import {auth} from './firebase'
 
 export default function SignUP() {
+
+const[email,setEmail] =useState('');
+const[password,setPassword] = useState('')
+ const [error, setError] = useState('');
+
+const register = async(e)=>{
+e.preventDefault()
+  try {
+    await createUserWithEmailAndPassword(auth,email,password);
+    alert("sucessfully account created")
+    
+  } catch (error) {
+    setError(error)
+  }
+}
+
+
+
+
   return (
     <>
     
@@ -12,23 +33,11 @@ export default function SignUP() {
         <div className="mb-2"></div>
         <h2 className="text-2xl font-bold leading-tight">
           Sign up to create account
-        </h2>
+        </h2> 
      
-        <form className="mt-5">
+        <form className="mt-5" onSubmit={register}>
           <div className="space-y-4">
-            <div>
-              <label className="text-base font-medium text-gray-900">
-                User Name
-              </label>
-              <div className="mt-2">
-                <input
-                  placeholder="Full Name"
-                  type="text"
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                  name="user_name"
-                />
-              </div>
-            </div>
+            
             <div>
               <label className="text-base font-medium text-gray-900">
                 Email address
@@ -38,7 +47,7 @@ export default function SignUP() {
                   placeholder="Email"
                   type="email"
                   className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                  name="email"
+                  name="email" onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -54,6 +63,7 @@ export default function SignUP() {
                   type="password"
                   className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                   name="password"
+                  onChange={(e)=>setPassword(e.target.value)}
                 />
               </div>
     
@@ -61,7 +71,7 @@ export default function SignUP() {
             <div>
               <button
                 className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
-                type="button"
+                type="submit"
               >
                 Create Account
               </button>
