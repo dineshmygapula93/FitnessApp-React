@@ -7,6 +7,7 @@ import DashBoard from './pages/DashBoard'
 import BodyPart from './pages/BodyPart'
 import Equipment from './pages/Equipment'
 import Muscle from './pages/Target'
+import ProtectedRoute from './ProtectedGaurd'
 export default function App() {
   return (
     <>
@@ -17,10 +18,10 @@ export default function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/signUP' element={<SignUP/>} />
-      <Route path='/dashboard' element={<DashBoard/>}/>
-      <Route path='/bodypart' element={<BodyPart/>}/>
-      <Route path='equipment' element={<Equipment/>}/>
-      <Route path='/muscle' element={<Muscle/>}/>
+      <Route path='/dashboard' element={<ProtectedRoute><DashBoard/></ProtectedRoute>}/>
+      <Route path='/bodypart' element={<ProtectedRoute><BodyPart/></ProtectedRoute>}/>
+      <Route path='equipment' element={<ProtectedRoute><Equipment/></ProtectedRoute>}/>
+      <Route path='/muscle' element={<ProtectedRoute><Muscle/></ProtectedRoute>}/>
     </Routes>
    </BrowserRouter>
   

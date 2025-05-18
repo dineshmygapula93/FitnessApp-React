@@ -27,7 +27,7 @@ console.log(error)
 },[bodypart])
   return (
     <>
-    <div className='flex h-screen'>
+    <div className='min-h-screen flex'>
       <div className='w-1/4 bg-red-700 flex flex-col justify-start items-center gap-3 py-5'>
       <h1 className='text-2xl bg-linear-120 bg-green-600 to-blue-700 p-1 rounded-2xl'>Select the body part you want</h1>
         {bodypartlist.map((b)=><li className="list-none text-2xl text-white bg-red-700  py-0.5 px-6 ring-2 ring-white rounded-2xl hover:cursor-pointer" key={b} onClick={()=>setBodypart(b)}>{b}</li>)}
@@ -42,7 +42,17 @@ console.log(error)
                   <h1>{item.name}</h1>
                 </div>
               ))
-          ):(<p>loading</p>)}
+          ):(<div className="flex items-center justify-center min-h-screen col-span-full h-full">
+  <div className="text-center">
+    <p className="text-lg font-semibold text-gray-700 mb-4 animate-pulse">Loading, please wait...</p>
+    <img
+      className="animate-spin rounded-[15vw] w-30 h-30 mx-auto"
+      src="https://spinillusion.hu/wp-content/uploads/favicon-opt.png"
+      alt="spin"
+    />
+  </div>
+</div>
+)}
         </div>
       </div>
     </div>
