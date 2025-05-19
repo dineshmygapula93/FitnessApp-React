@@ -11,10 +11,7 @@ const navigate =useNavigate()
 
 const loginapp = async(e)=>{
 e.preventDefault()
-     if(email.length<10){
-      alert('Please make sure that you are entering a genuine email')
-    }
-    else{
+     
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         navigate("/dashboard")
@@ -26,7 +23,7 @@ e.preventDefault()
         setEmail('')
         setPassword('')
       });
-    }
+    
   
 }
   return (
