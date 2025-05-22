@@ -8,7 +8,7 @@ export default function BodyPart() {
     const fetchdata = async()=>{
       try {
         
-        const response= await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${target}?limit=10&offset=0`,{
+        const response= await fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${target}?limit=10&offset=0`,{
   method: "GET",
   headers :{
     'X-Rapidapi-Key': import.meta.env.VITE_REACT_APP_KEY,

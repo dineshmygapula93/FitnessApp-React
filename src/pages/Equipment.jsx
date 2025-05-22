@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 
 export default function BodyPart() {
   const equipmentlist=["assisted","band","barbell","body weight","bosu ball","cable","dumbbell","elliptical machine","ez barbell","hammer","kettlebell","leverage machine","medicine ball","olympic barbell","resistance band","roller","rope","skierg machine","sled machine","smith machine","stability ball","stationary bike","stepmill machine","tire","trap bar","upper body ergometer","weighted","wheel roller"]
-  const[equipment,setEquipment] =useState('assited')
+  const[equipment,setEquipment] =useState('assisted')
   const[Data,setData] =useState('')
   useEffect(()=>{
     const fetchdata = async()=>{
       try {
         
-        const response= await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${equipment}?limit=10&offset=0`,{
+        const response= await fetch(`
+https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment}?limit=10&offset=0
+`,{
   method: "GET",
   headers :{
     'X-Rapidapi-Key': import.meta.env.VITE_REACT_APP_KEY,
