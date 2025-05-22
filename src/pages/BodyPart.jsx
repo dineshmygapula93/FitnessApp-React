@@ -32,7 +32,7 @@ console.log(error)
       <h1 className='text-2xl bg-linear-120 bg-green-600 to-blue-700 p-1 rounded-2xl'>Select the body part you want</h1>
         {bodypartlist.map((b)=><li className="list-none text-base sm:text-xl text-white bg-red-700 py-1 px-4 sm:px-6 ring-2 ring-white rounded-2xl hover:cursor-pointer text-center" key={b} onClick={()=>setBodypart(b)}>{b}</li>)}
       </div>
-      <div className='w-3/4 bg-green-50'>
+      <div className='w-3/4 sm:w-3/4 bg-green-50'>
         <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 my-8 drop-shadow-lg">
   {bodypart}
 </h1>

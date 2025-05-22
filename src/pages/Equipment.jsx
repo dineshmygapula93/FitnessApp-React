@@ -32,7 +32,7 @@ console.log(error)
       <h1 className='text-2xl bg-linear-120 bg-green-600 to-blue-700 p-1 rounded-2xl'>Select the Equipment you want</h1>
         {equipmentlist.map((b)=><li className="list-none text-base sm:text-xl text-white bg-red-700 py-1 px-4 sm:px-6 ring-2 ring-white rounded-2xl hover:cursor-pointer text-center" key={b} onClick={()=>setEquipment(b)}>{b}</li>)}
       </div>
-      <div className='w-3/4 bg-green-50'>
+      <div className='w-3/4 sm:w-3/4 bg-green-50'>
         <h1 className='text-3xl flex justify-center'>{equipment}</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 rounded-5xl'>
           {Data.length>0? (
