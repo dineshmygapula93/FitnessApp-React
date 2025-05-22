@@ -7,7 +7,6 @@ export default function BodyPart() {
   useEffect(()=>{
     const fetchdata = async()=>{
       try {
-        
         const response= await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodypart}?limit=10&offset=0`,{
   method: "GET",
   headers :{
