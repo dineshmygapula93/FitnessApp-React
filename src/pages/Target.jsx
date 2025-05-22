@@ -28,9 +28,9 @@ console.log(error)
   return (
     <>
     <div className='min-h-screen flex'>
-      <div className='w-1/4 bg-red-700 flex flex-col justify-start items-center gap-3 py-5'>
+      <div className='w-full sm:w-1/4 bg-red-700 flex flex-col justify-start items-center gap-3 py-5'>
       <h1 className='text-2xl bg-linear-120 bg-green-600 to-blue-700 p-1 rounded-2xl'>Select the body part you want</h1>
-        {targetlist.map((b)=><li className="list-none text-2xl text-white bg-red-700  py-0.5 px-6 ring-2 ring-white rounded-2xl hover:cursor-pointer" key={b} onClick={()=>settarget(b)}>{b}</li>)}
+        {targetlist.map((b)=><li className="list-none text-base sm:text-xl text-white bg-red-700 py-1 px-4 sm:px-6 ring-2 ring-white rounded-2xl hover:cursor-pointer text-center" key={b} onClick={()=>settarget(b)}>{b}</li>)}
       </div>
       <div className='w-3/4 bg-green-50'>
         <h1 className='text-3xl flex justify-center'>{target}</h1>

@@ -1,5 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Image1 from '../assets/e1.jpg'
+import Image2 from '../assets/e2.jpg'
+import Image3 from '../assets/e3.jpg'
 
 export default function DashBoard() {
   return (
@@ -12,7 +15,7 @@ export default function DashBoard() {
 
           <div className="w-full sm:w-72 lg:h-96 h-auto shadow-xl/30 my-10 rounded-2xl p-3 flex flex-col gap-5">
             <h1 className="text-2xl">Exercise Based on Body Part</h1>
-            <img src="public/e1.jpg" alt="e1" className="w-full h-auto object-cover rounded-xl" />
+            <img src={Image1} alt="e1" className="w-full h-auto object-cover rounded-xl" />
             <NavLink to="/bodypart">
               <button
                 type="submit"
@@ -35,7 +38,7 @@ export default function DashBoard() {
 
           <div className="w-full sm:w-72 lg:h-96 h-auto shadow-xl/30 my-10 rounded-2xl p-3 flex flex-col gap-5">
             <h1 className="text-2xl">Exercise Based on Equipment</h1>
-            <img src="public/e2.jpg" alt="e2" className="w-full h-auto object-cover rounded-xl" />
+            <img src={Image2} alt="e2" className="w-full h-auto object-cover rounded-xl" />
             <NavLink to="/equipment">
               <button
                 type="submit"
@@ -58,7 +61,7 @@ export default function DashBoard() {
 
           <div className="w-full sm:w-72 lg:h-96 h-auto shadow-xl/30 my-10 rounded-2xl p-3 flex flex-col gap-5">
             <h1 className="text-2xl">Exercise Based on Muscle</h1>
-            <img src="public/e3.jpg" alt="e3" className="w-full h-auto object-cover rounded-xl" />
+            <img src={Image3} alt="e3" className="w-full h-auto object-cover rounded-xl" />
             <NavLink to="/muscle">
               <button
                 type="submit"
