@@ -13,7 +13,6 @@ const navigate =useNavigate()
 const register = async(e)=>{
 e.preventDefault()
   try {
-
    if (password ==conpassword) {
      await createUserWithEmailAndPassword(auth,email,password);
     alert("sucessfully account created")

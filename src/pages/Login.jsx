@@ -11,7 +11,6 @@ const navigate =useNavigate()
 
 const loginapp = async(e)=>{
 e.preventDefault()
-     
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         navigate("/dashboard")
