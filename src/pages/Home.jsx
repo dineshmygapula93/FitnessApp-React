@@ -63,7 +63,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className='text-lg'>Inches</h3>
+            <h3 className='text-lg'>Inches </h3>
             <input
               type='range'
               min='0'
